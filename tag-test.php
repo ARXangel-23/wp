@@ -5,9 +5,10 @@ Template Name: Tag Archive
 
 <main id="str-<?php the_ID(); ?>" class="container-fluid bg-sm-primary bg-md-warning bg-lg-dark">
 
+
 <section id="section1" class="container">
   <div class="row">
-    <div class="col-12 col-lg-8 my-3" style="min-height:800px;">
+    <div class="col-12 col-lg-7 my-3">
         <div id="carouselNews" class="carousel slide carousel-dark">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselNews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -85,7 +86,7 @@ Template Name: Tag Archive
         </div> <!-- carouselNews end -->
     </div> <!-- Слайдер с картикой-->
 
-    <div class="col-12 col-lg-4 my-3 vh-100 overflow-auto" style="min-height:800px;">
+    <div class="col-12 col-lg-3 my-3 vh-100 overflow-auto">
       <?php
         // Цикл 2
         $args = array(
@@ -102,7 +103,7 @@ Template Name: Tag Archive
         $query0->the_post();?>
         <div class="card bg-white mb-4" style="">
           <div class="card-body">
-            <h5 class="card-title postTitle2"><?php the_title() ?></h5>
+            <h5 class="card-title headerSnippet"><?php the_title() ?></h5>
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><span class="small-text m-0 p-0 text-start text-danger"><?php the_time("d M Y") ?></span></li>
               <li class="list-group-item"><p class="text-right small-text"><?php the_tags(null, ' | ')?></p></li>
@@ -116,13 +117,15 @@ Template Name: Tag Archive
       ?>
     </div><!-- Новости по дате без превью -->
 
-    <div class="col-12 col-lg-3 my-3 d-none"><?php get_sidebar('banners'); ?></div><!-- Баннеры -->
+    <div class="col-12 col-lg-2 my-3 vh-100 overflow-auto"><?php get_sidebar('rss'); ?></div><!-- Баннеры -->
     
   </div><!-- row -->
   <a href="" class="btn btn-outline-primary d-block my-4 mx-auto" style="width: 150px;">Все новости</a>
 </section> <!-- section1 -->
 
-<section id="section2" class="wow zoomInDown container-fluid section overflow-auto p-2" style="white-space:nowrap;" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="20"  data-wow-iteration="1">
+<hr class="hr border border-dark border-2 opacity-50">
+
+<section id="section2" class="wow fadeInUp container-fluid section overflow-auto p-2" style="white-space:nowrap;" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="15"  data-wow-iteration="1">
   <div class="d-flex flex-row flex-nowrap">
     <?php
       // Цикл 2
@@ -150,7 +153,14 @@ Template Name: Tag Archive
 </section><!-- section2 Фотоальбом end-->
 <a href="" class="btn btn-outline-primary d-block my-4 mx-auto" style="width: 150px;">Все фотоальбомы</a>
 
-<section id="section3" class="section container mb-5 wow bounceInLeft border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="20"  data-wow-iteration="1">  
+<hr class="hr border border-dark border-2 opacity-50">
+
+<?php get_sidebar('banners'); ?></div>
+
+<hr class="hr border border-dark border-2 opacity-50">
+
+<!-- section3 Твои люди, район! -->
+<section id="section3" class="section container mb-5 wow fadeInUp border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="15"  data-wow-iteration="1">  
  <div class="d-block border-2 border-bottom border-primary mb-4"><span class="chapterTitle d-inline-block text-white py-1 px-3 rounded-top bg-primary">Твои люди, район!</span></div>
   <div class="row block-overflow row-cols-1 row-cols-sm-3 row-cols-lg-4 g-4" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="5"  data-wow-iteration="1" style="overflow-y: auto;">
     <?php
@@ -161,6 +171,7 @@ Template Name: Tag Archive
       <div class="col">
         <div class="card h-100" style="">
           <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-start" alt="...">
+          <?php the_post_thumbnail_caption(); ?>
           <div class="card-body">
             <h5 class="card-title postTitle2"><?php the_title() ?></h5>
             <ul class="list-group list-group-flush">
@@ -178,9 +189,7 @@ Template Name: Tag Archive
   <div class="accordion my-3" id="tagsSection3">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button text-white bg-dark bg-opacity-50 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetagsSection3" aria-expanded="true" aria-controls="collapsetagsSection3">
-          Метки раздела
-        </button>
+        <button class="accordion-button text-white bg-dark bg-opacity-50 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetagsSection3" aria-expanded="true" aria-controls="collapsetagsSection3">Метки раздела</button>
       </h2>
       <div id="collapsetagsSection3" class="accordion-collapse collapse" >
         <div class="accordion-body list-inline">
@@ -192,9 +201,10 @@ Template Name: Tag Archive
       </div> <!-- accordion-collapse -->
     </div> <!-- accordion-item -->
   </div> <!-- tagsSection3 -->
-</section><!-- section3 Твои люди, район!-->
+</section><!-- section3 Твои люди, район! end -->
 
-<section id="section4" class="container section mb-5 wow bounceInLeft border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="20"  data-wow-iteration="1">
+<!-- section4 Правопорядок -->
+<section id="section4" class="section container mb-5 wow fadeInUpBig border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="15"  data-wow-iteration="1">
  <div class="d-block border-2 border-bottom border-primary my-4"><span class="chapterTitle d-inline-block text-white py-1 px-3 rounded-top bg-primary"><span class="chapterTitle">Правопорядок</span></div>  
   <div class="row block-overflow row-cols-1 row-cols-sm-6 row-cols-lg-4 g-4" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="5"  data-wow-iteration="1" style="overflow-y: auto;">
     <?php 
@@ -222,9 +232,7 @@ Template Name: Tag Archive
   <div class="accordion my-3" id="tagsSection4">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetagsSection4" aria-expanded="true" aria-controls="collapsetagsSection4">
-          Метки раздела
-        </button>
+        <button class="accordion-button text-white bg-dark bg-opacity-50 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetagsSection4" aria-expanded="true" aria-controls="collapsetagsSection4">Метки раздела</button>
       </h2>
       <div id="collapsetagsSection4" class="accordion-collapse collapse" >
         <div class="accordion-body list-inline">
@@ -237,9 +245,10 @@ Template Name: Tag Archive
       </div> <!-- accordion-collapse -->
     </div> <!-- accordion-item -->
   </div> <!-- tagsSection4 -->
-</section><!-- section4 Правопорядок-->
+</section><!-- section4 Правопорядок end -->
 
-<section id="section5" class="container section mb-5 wow bounceInLeft border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="20"  data-wow-iteration="1">
+<!-- section5 Культура -->
+<section id="section5" class="section container mb-5 wow bounceInUp border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="15"  data-wow-iteration="1">
   <div class="d-block border-2 border-bottom border-primary my-3"><span class="chapterTitle d-inline-block text-white py-1 px-3 rounded-top bg-primary"><span class="chapterTitle">Культура</span></div>
   <div class="row">
     <?php
@@ -333,10 +342,10 @@ Template Name: Tag Archive
       </div> <!-- accordion-collapse -->
     </div> <!-- accordion-item -->
   </div> <!-- tagsSection5 -->
-</section><!-- section5 Культура -->
+</section><!-- section5 Культура end -->
 
 <!-- section5 Спорт -->
-<section id="section6" class="container section mb-5 wow bounceInLeft border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="20"  data-wow-iteration="1">
+<section id="section6" class="container section mb-5 wow bounceInUp border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="15"  data-wow-iteration="1">
   <div class="d-block border-2 border-bottom border-primary my-3"><span class="chapterTitle d-inline-block text-white py-1 px-3 rounded-top bg-primary"><span class="chapterTitle">Спорт</span></div>
   <div class="row row-cols-1 row-cols-sm-6 row-cols-lg-4 g-4" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="5"  data-wow-iteration="1">
     <?php
@@ -357,7 +366,10 @@ Template Name: Tag Archive
       $query7->the_post();?>
       <div class="col">
         <div class="card h-100" style="">
-          <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-start" alt="...">
+          <figure id="" class="postFigureSnippet">
+            <img class="img-fluid imgSnippet rounded-start" src="<?php the_post_thumbnail_url('full'); ?>" title="<?php the_post_thumbnail_caption(); ?>"  alt="<?php the_post_thumbnail_caption(); ?> | <?php the_title(); ?>" />
+            <figcaption class="posFigcaptionSnippet"><?php the_post_thumbnail_caption(); ?></figcaption>
+          </figure>
           <div class="card-body">
             <h5 class="card-title postTitle2"><?php the_title() ?></h5>
             <ul class="list-group list-group-flush">
@@ -399,7 +411,8 @@ Template Name: Tag Archive
   </div> <!-- tagsSection6 -->
 </section><!-- section6 Спорт end -->
 
-<section id="section7" class="container section mb-5 wow bounceInLeft border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="20"  data-wow-iteration="1">
+<!-- section7 Образование -->
+<section id="section7" class="container section mb-5 wow bounceInUp border-2 border-start border-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="15"  data-wow-iteration="1">
   <div class="d-block border-2 border-bottom border-primary mt-5"><span class="chapterTitle d-inline-block text-white py-1 px-3 rounded-top bg-primary"><span class="chapterTitle">Образование</span></div>
   <div class="row">
   <?php
@@ -437,7 +450,10 @@ Template Name: Tag Archive
       <?php } elseif ($query6->current_post % 2)  {?>
         <div class="col-12 col-lg-6 pb-2 mb-2 rounded">
           <div class="card h-100" style="">
-            <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-start" alt="...">
+            <figure id="" class="postFigureSnippet">
+              <img class="img-fluid imgSnippet rounded-start" src="<?php the_post_thumbnail_url('full'); ?>" title="<?php the_post_thumbnail_caption(); ?>"  alt="<?php the_post_thumbnail_caption(); ?> | <?php the_title(); ?>" />
+              <figcaption class="posFigcaptionSnippet"><?php the_post_thumbnail_caption(); ?></figcaption>
+            </figure>
             <div class="card-body">
               <h5 class="card-title postTitle2"><?php the_title() ?></h5>
               <ul class="list-group list-group-flush">
@@ -453,7 +469,10 @@ Template Name: Tag Archive
         <?php } else { ?>
           <div class="col-12 col-lg-6 pb-2 mb-2 rounded">
           <div class="card h-100" style="">
-                <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-start" alt="...">
+                <figure id="" class="postFigureSnippet">
+                  <img class="img-fluid imgSnippet rounded-start" src="<?php the_post_thumbnail_url('full'); ?>" title="<?php the_post_thumbnail_caption(); ?>"  alt="<?php the_post_thumbnail_caption(); ?> | <?php the_title(); ?>" />
+                  <figcaption class="posFigcaptionSnippet"><?php the_post_thumbnail_caption(); ?></figcaption>
+                </figure>
                 <div class="card-body">
                   <h5 class="card-title postTitle2"><?php the_title() ?></h5>
                   <ul class="list-group list-group-flush">
@@ -469,9 +488,9 @@ Template Name: Tag Archive
     </div><!-- col-8 -->
     <?php wp_reset_postdata(); ?>
   </div>
-</section><!-- section7 Образование -->
+</section><!-- section7 Образование end -->
 
-<section id="section8" class="section overflow-auto wow bounceInLeft border-2 border-start border-primary" style="white-space:nowrap;">
+<section id="section8" class="section overflow-auto wow bounceInUp border-2 border-start border-primary" style="white-space:nowrap;">
   <div class="d-block border-2 border-bottom border-primary"><span class="chapterTitle d-inline-block text-white py-1 px-3 rounded-top bg-primary"><span class="chapterTitle">Наши поэты</span></div>
   <?php
     // Цикл 9
@@ -496,4 +515,3 @@ Template Name: Tag Archive
 
 
 <?php get_footer(); ?>
-
