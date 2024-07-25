@@ -1,0 +1,368 @@
+/*
+	Theme Name: myTheme
+	Template: 
+	*Template Name:
+	Theme URI:
+	Author: Илья Обухов
+	Author URI: 
+	Description: Тестовая тема
+	Version: 1.0
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Tags: 
+	Text Domain:
+*/
+ 
+html, body {
+    box-sizing: border-box;
+	margin:0; padding:0;
+	font: normal normal normal 14px/20px Georgia, serif;
+	background:#f8f8f8;
+	color:#000;
+	height: 100%;
+}
+
+.custom-logo{
+	width: 100%;
+    height: auto;
+}
+
+#footer{
+	background: url(http://avangard-93.ru/wp-content/uploads/2023/12/fon1280х960.jpg) no-repeat 100% 100% rgba(0,0,0,0.5);
+	background-size: cover;
+    background-attachment: fixed;
+}
+
+/*.carousel-caption{position: static !important;}*/
+section .block-overflow{ height:450px;}
+/*Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше)*/
+@media (min-width: 576px) {
+	/*.carousel-caption{position: absolute !important;}*/
+	
+}
+
+/* Устройства Medium (планшеты, 768 пикселей и выше)*/
+@media (min-width: 768px) {
+	section .block-overflow{ height:auto;}
+}
+
+/* Устройства Large (настольные компьютеры, 992 пикселей и выше)*/
+@media (min-width: 992px) {
+
+}
+
+/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше)*/
+@media (min-width: 1200px) {
+
+}
+
+/* Устройства XX-Large (большие настольные компьютеры, 1400 пикселей и выше)*/
+@media (min-width: 1400px) { 
+
+} 
+
+marquee{
+	background: rgba(0, 0, 0, 0.5);
+	color:#fff;
+}
+marquee .marquee span{
+	font: normal bold normal 14px/20px Georgia, serif  !important;
+}
+
+
+/* спрайт 
+ * http://avangard-93.ru/wp-content/uploads/2022/03/SpriteSOC_45x900.png
+ * */
+
+ .sprite {
+	background-image: url(http://avangard-93.ru/wp-content/uploads/2024/07/spritesheet.png);
+	background-repeat: no-repeat;
+	display: block;
+	background-size: cover;
+	border-radius: 50px;
+}
+.sprite:hover{border-radius: 0px;}
+
+.sprite-BK {
+	width: 30px;
+	height: 30px;
+	background-position: 0 -30px;
+}
+
+.sprite-OK {
+	width: 30px;
+	height: 30px;
+	background-position: 0 -270px;
+}
+
+.sprite-Z {
+	width: 30px;
+	height: 30px;
+	background-position: 0 -450px;
+}
+
+.sprite-tg {
+	width: 30px;
+	height: 30px;
+	background-position: 0 -690px;
+}
+
+.sprite-mail {
+	width: 30px;
+	height: 30px;
+	background-position: 0 -8721px;
+}
+
+.sprite-now {
+	width: 30px;
+	height: 30px;
+	background-position: 0 -9234px;
+}
+
+.sprite-rutub {
+	width: 30px;
+	height: 30px;
+	background-position: 0 -11286px;
+}
+
+ /*Присоединяйся*/ 
+ .socMulti30{text-align: center; padding: 0; margin: 0;}
+ .socMulti30 li{ display: inline-block; margin: 0 5px;}
+ .socMulti30 li a{
+ width: 30px;
+ height: 30px;
+ display: inline-block;
+ border-radius: 50px;
+ -webkit-box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75);
+ -moz-box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75);
+ box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75);
+ }
+ .socMulti30 li a:hover{border-radius: 0px;}
+
+article{}
+
+.imgLineMarquee {
+	margin: 1% 0;
+	padding:1% 0;
+}
+.imgLine{
+	display: inline-block;
+	text-align: center;
+}
+.imgLine img{
+	height: 200px;
+    width: auto;
+box-shadow: 5px -5px 5px 0px rgba(0,0,0,0.49);
+-webkit-box-shadow: 5px -5px 5px 0px rgba(0,0,0,0.49);
+-moz-box-shadow: 5px -5px 5px 0px rgba(0,0,0,0.49);
+	
+}
+
+a.btn-tel:before {
+	content: "Тел. ";      
+}
+/**/
+#singlePagegallery article .postFigure {
+	position:relative;
+}
+#singlePagegallery article .postFigure .posFigcaption {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 90%;
+
+	left: 8px;
+	right: 8px;
+	color: #fff;
+	text-align: center;
+  vertical-align: middle;
+	display:none;
+	z-index: 1;
+
+}
+
+#singlePagegallery article .postFigure:hover .posFigcaption{
+	display:block;
+}
+
+h3 {
+font: italic normal bold 20px/22px Georgia, serif;
+	text-align:center;
+}
+
+.none{
+	display:none !important;
+}
+
+/*Рубрики*/
+.listCategory:hover li.cat-item{}
+li.categories {} 
+li.cat-item {
+	padding: 4px;
+    margin: 8px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+li.cat-item:hover {background: #fff;}
+li.cat-item:hover a {color: #000;}
+li.cat-item a {color: #fff;}
+li.cat-item-7 {} 
+li.current-cat {} 
+li.current-cat-parent {} 
+ul.children {} 
+
+h4 sup{font: italic normal normal 12px/20px Georgia, serif;}
+
+blockquote{
+width: 80% !important;
+font: italic normal normal 14px/20px Georgia, serif  !important;
+padding: 1rem;
+margin:10px auto 30px;
+background:#eee;
+	
+border-left:10px solid #00f;
+	
+box-shadow: 10px 10px 5px -2px rgba(125,125,125,0.75);
+-webkit-box-shadow: 10px 10px 5px -2px rgba(125,125,125,0.75);
+-moz-box-shadow: 10px 10px 5px -2px rgba(125,125,125,0.75);
+}
+
+.newsContent ol {list-style: decimal inside !important;}
+.newsContent ul{list-style: square inside !important;}
+.newsContent ol li, .newsContent ul li {}
+
+
+blockquote p {}
+
+blockquote p:before {content: ""}
+
+.postNews figure{
+    overflow: hidden;
+}
+.postNews figure img {
+	max-height: 300px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+figure{}
+figure img {}
+figure figcaption {
+	border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: right;
+	font: italic normal normal 14px/20px Georgia, serif;
+}
+
+figure figcaption:before {}
+
+/*Метка*/
+#str-50354  .tag-cloud-link {
+border: 1px solid #00f;
+    margin: 2px;
+    padding: 0 0 0 8px;
+    display: inline-block;
+}
+#str-50354 .tag-cloud-link span{
+	background: #00f;
+    color: #fff;
+    display: inline-block;
+    padding: 4px;
+    margin: 0 0 0 10px;
+	font-size: 8px;
+}
+/*Пост*/
+h1.postTitle, .postTitle {
+font: italic normal bold 30px/36px Georgia, serif;
+font-size: calc(1.5rem + 6 * (100vw - 320px) / 880);
+color:#000;
+text-decoration: none;
+margin: 10px 0;
+display: block;
+word-break: break-word;
+}
+
+.wp-block-rss .wp-block-rss__item .wp-block-rss__item-title a{
+	font: italic normal bold 14px/18px Georgia, serif;
+	color:#000;
+	text-decoration: none;	
+	margin: 0 auto 10px;
+	display: block;
+}
+
+.headerSnippet{
+	font: italic normal bold 18px/22px Georgia, serif;
+	font-size: calc(1 + 6 * (100vw - 320px) / 880);
+	color:#000;
+	text-decoration: none;
+
+}
+
+.postTitle2 {
+font: italic normal bold 18px/22px Georgia, serif;
+color:#000;
+text-decoration: none;
+margin: 10px 0;
+display: block;
+word-break: break-word;
+}
+
+.chapterTitle{
+	font: normal normal bold 16px/36px Georgia, serif;
+}
+
+.postLink{
+display:block;
+text-align:right;
+font: normal normal normal 12/16px Georgia, 'Times New Roman', Times, serif;
+word-break: break-all;
+}
+.newsBrief p{
+	font: normal normal normal 16px/24px Georgia, serif;
+	text-align:justify;
+}
+.newsContent {
+	font: normal normal normal 16px/24px Georgia, serif;
+}
+.newsContent p:first-of-type {font: bold italic normal 16px/24px Georgia, serif;}
+.newsContent em {font: normal italic normal 16px/24px Georgia, serif;}
+
+/*Архив записей*/
+.wp-block-archives-list, .wp-block-archives {
+	margin: 0; padding: 0; text-align: center;
+	font: normal normal normal 12px/16px Georgia, serif;
+}
+
+.wp-block-archives-list li{
+    margin: 1%;
+	padding: 1%;
+	width:46%;
+	display: inline-block;
+}
+.wp-block-archives-list li a{}
+.wp-block-archives-list li:hover{
+	background:#ccc;
+	border-radius:5px;
+}
+
+/*Пагинация*/
+nav.navigation.pagination {display: block;}
+.nav-links{
+	display: block;
+    text-align: center;
+}
+ul.page-numbers{}
+ul.page-numbers li {display: inline-block;}
+ul.page-numbers li span.dots{}
+ul.page-numbers li span.current{
+	background:#00f;
+	color:#fff;
+	margin: 5px;
+    padding: 10px;
+}
+ul.page-numbers li a.page-numbers{
+	border: 1px solid #ccc;
+    padding: 5px;
+    margin: 2px;
+	background:#fff;
+}
